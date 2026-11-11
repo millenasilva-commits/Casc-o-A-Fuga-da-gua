@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+div#tela {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('fundo3.png') no-repeat center bottom;
+  background-size: cover;
+  margin: auto;
+  overflow: hidden;
+}
+
+img#balde {
+  position: absolute;
+  width: 150px;
+  bottom: 70px;
+  animation: animacaoCano 1.5s infinite linear;
+}
+
+@keyframes animacaoCano {
+  from { right: -150px; }
+  to { right: 100%; }
+}
+
+img#aviao {
+  position: absolute;
+  width: 1000px;
+  top: -40px;
+  animation: animacaoNuvens 20s infinite linear;
+}
+
+@keyframes animacaoNuvens {
+  from { right: -600px; }
+  to { right: 100%; }
+}
+
+img#cascao {
+  position: absolute;
+  width: 220px;
+  bottom: 75px;
+}
+
+.pulo {
+  animation: animacaoMario 500ms linear;
+}
+
+@keyframes animacaoMario {
+  0% { bottom: 75px; }
+  50% { bottom: 295px; }
+  100% { bottom: 75px; }
+}
+
+img#gameover {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+div#contador {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  font-weight: 900;
+  color: black;
+  white-space: nowrap;
+  z-index: 100;
+}
+
+div#placar {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  font-weight: 900;
+  color: black;
+  white-space: nowrap;
+  z-index: 100;
+}
+
+div#pato {
+    position: absolute;
+    width: 150px;          /* era 85px */
+    bottom: 360px;
+    right: -155px;         /* acompanha o novo tamanho */
+    z-index: 50;
+    animation: moverPato 1.5s linear infinite;
+  }
+  
+  div#pato img {
+    width: 150px;          /* era 85px */
+    display: block;
+  }
+  
+  div#pato.coletado {
+    visibility: hidden;
+  }
+  
+  @keyframes moverPato {
+    from { right: -155px; }  /* acompanha o novo tamanho */
+    to { right: 100%; }
+  }
+
+div#fim {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  text-align: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 28px;
+  line-height: 1.6;
+  color: black;
+  z-index: 100;
+  visibility: hidden;
+}
